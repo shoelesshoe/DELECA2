@@ -1,0 +1,39 @@
+# DCGAN
+remove dropout from disc
+increase strides for disc
+batchnorm for all except gen output and disc input
+relu for gen, leakyrelu of 0.2 for disc
+train with labels for images
+train with real = fake, fake = real (flipped)
+
+EXPLAIN WHY USE SSIM METRIC 
+
+### GAN Model Evaluation Methods
+
+There are several methods to evaluate the GAN. However, there are some issues with evaluating a GAN generator model.
+
+1. There is no labels for GAN, the main focus is the quality of the synthetic data.
+2. Different models have different objective functions
+
+There are a few methods:
+
+1. Manual GAN Evaluation
+   - The simplest evaluation method is through visual evaluation using our eyes.
+   - However, there are some issues:
+     1. This method is very subjective and have some bias by the reviewer
+     2. As the Cifar-10 images are only (32, 32, 3), it is hard to differentiate the classes and it is very small which is unclear
+     3. If there is a large quantity of images generated, there is no way to go through each and every image to evaluate it
+2. Qualitative GAN Evaluation
+   - By identifying non numerical data in the images, we are able to use human subject evaluation or evaluation via comparison. Some techniques include using:
+     1. Nearest Neighbors [Detect overfitting, generated samples are shown next to nearest neighbour in the training set]
+     2. Rapid Scene Categorization [Get participants to help classify real and fake data]
+3. Quantitative GAN Evaluation
+   - Evaluating GAN on quantitative means refers to using a specific calculation of specific numerical scores, used to summarize the general quality of the images.
+   - There are a few metrics:
+     1. KL Divergence (aka relative entropy) [Measures the distance between two statistical probability]
+     2. Fréchet Inception Distance [compares distribution of generated images]
+
+For simplicity, we will be only evaluating the GAN models with manual and quantitative evaluation
+
+
+from the goat soh hong yu

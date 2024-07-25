@@ -1,6 +1,0 @@
-remove dropout from disc
-increase strides for disc
-batchnorm for all except gen output and disc input
-relu for gen, leakyrelu of 0.2 for disc
-train with labels for images
-train with real = fake, fake = real (flipped)
