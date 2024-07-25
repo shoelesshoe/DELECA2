@@ -6,7 +6,7 @@ relu for gen, leakyrelu of 0.2 for disc
 train with labels for images
 train with real = fake, fake = real (flipped)
 
-EXPLAIN WHY USE SSIM METRIC 
+# EXPLAIN WHY USE SSIM METRIC 
 
 ### GAN Model Evaluation Methods
 
