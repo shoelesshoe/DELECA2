@@ -1,5 +1,0 @@
-1) More actions, less actions: What are appropriate number of actions to discretise the range -2.0 to 2.0?
-2) Stability of training, i.e. should you train longer or cut it off within some number of episodes?
-3) Track the reward, save weights, plot performance. Reproduce your best possible agent by loading your best weights and test it for say, 10 times. Does it consistently balance the pendulum for all 10 times when tested?
-4) Exploration vs exploitation (the epsilon hyperparameter). Should you decay it?
-5) Explain the differences between this code and the lab code for cartpole.
